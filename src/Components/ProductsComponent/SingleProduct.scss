@@ -1,0 +1,22 @@
+.card1{
+    padding: 50px;
+}
+.product-image{
+    width: 250px;
+     align-items: center;
+    
+}
+.item-title{
+    border-bottom: rgb(250, 234, 7);
+    align-items: center;
+    font-weight: 600;
+    font-size: medium;
+}
+.btn-container{
+    display: flex !important;
+    
+  //align-items: center;
+}
+.btn-dark{
+    justify-content: center !important;
+}
