@@ -1,3 +1,4 @@
+import { getProductList } from "../../Services/productApiFunctions";
 import * as actionTypes from "./shopping-types";
 
 export const addToCart = (itemID) => {
@@ -8,6 +9,8 @@ export const addToCart = (itemID) => {
         },
     };
 };
+
+//export const datalist = (await getProductList()).data
 
 export const removeFromCart = (itemID) => {
     return {

@@ -1,13 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { getProductList } from '../../Services/productApiFunctions'
 import './AllProducts.scss'
 import SingleProduct from './SingleProduct'
 
 const AllProducts = () => {
+    const [items, setItems] = useState({});
 
     useEffect(() => {
-        getProductList();
+        getProductList().then((res) => {
+            setItems(res.data);
+            console.log(items);
+
+        });
+
     }, [])
+
+
 
     return (
         <div className="row px-5">

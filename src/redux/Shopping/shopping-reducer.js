@@ -1,35 +1,10 @@
 import * as actionTypes from "./shopping-types";
+import getProductList from '../../Services/productApiFunctions'
 
+
+//const datalist = (await getProductList()).data;
 const INITIAL_STATE = {
-    products: [
-        {
-            id: 1,
-            title: "Watch",
-            description:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?",
-            price: 1000,
-            image:
-                "https://ae01.alicdn.com/kf/Hda94ca41d6514a2da4ea25526432a7aco/Men-Watches-2021-Luxury-Male-Elegant-Ultra-Thin-Watch-Men-Business-Stainless-Steel-Mesh-Quartz-Watch.jpg",
-        },
-        {
-            id: 2,
-            title: "Watch 2",
-            description:
-                "Get a big cup of coffee every morning before the day starts",
-            price: 20.0,
-            image:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyMqy8ck-0j6i6rnyGLXgNGonM25vkLx14A&usqp=CAU",
-        },
-        {
-            id: 3,
-            title: "Books That CHANGED My Life",
-            description:
-                "These books will keep you busy all throughout the entire lockdown and give you some great advise from famous people",
-            price: 150.0,
-            image:
-                "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80",
-        },
-    ],
+    products: null,
     cart: [],
     currentItem: null,
 };
