@@ -9,7 +9,7 @@ const AllProducts = () => {
     useEffect(() => {
         getProductList().then((res) => {
             setItems(res.data);
-            console.log(items);
+            console.log(res.data);
 
         });
 
@@ -37,12 +37,11 @@ const AllProducts = () => {
             <div className="col-md-9">
                 <div className="container col-md-12">
                     <div className="row col-md-12">
+                        {items.map((product) => (
+                            <SingleProduct key={product.id} product={product} />
+                        ))}
 
-                        <SingleProduct />
-                        <SingleProduct />
-                        <SingleProduct />
-                        <SingleProduct />
-                        <SingleProduct />
+
 
 
 
